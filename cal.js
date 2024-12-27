@@ -1,5 +1,6 @@
 const display_res = document.getElementById("display_res");
 const display_his = document.getElementById("display_his");
+const MAX_LENGTH = 10;
 
 // 초기값은 빈 문자열로
 let currentHis = "";
@@ -45,10 +46,13 @@ function applyPercent() {
 
 // 입력값에 값 추가(문자형식으로 추가됨 1+3 = 13)
 function handleNumber(value) {
-  if (currentInput === "0") {
-    currentInput = value;
-  } else {
-    currentInput += value;
+  // 최대 10글자까지만 계산 가능 하도록 제한
+  if (currentInput.length < MAX_LENGTH) {
+    if (currentInput === "0") {
+      currentInput = value;
+    } else {
+      currentInput += value;
+    }
   }
   updateDisplay(currentInput);
 
