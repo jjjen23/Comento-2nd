@@ -10,34 +10,38 @@
 <body>
   <div class="pageMain">
     <div class="calDiv">
-      <div class="result"><p>0</p></div>
+      <!-- 계산현황 -->
+      <div class="history"><p id="display_his"></p></div>
+      <!-- 결과 -->
+      <div class="result"><p id="display_res">0</p></div>
       <div class="numGroup">
-        <div class="num gray"><p>AC</p></div>
-        <div class="num gray"><p>+/-</p></div>
-        <div class="num gray"><p>%</p></div>
-        <div class="num yellow"><p>÷</p></div>
+        <div class="num gray" data-action="clear"><p>AC</p></div>
+        <div class="num gray" data-action="toggle-sign"><p>+/-</p></div>
+        <div class="num gray" data-action="percent"><p>%</p></div>
+        <div class="num yellow" data-action="operator" data-value="/"><p>÷</p></div>
 
-        <div class="num"><p>7</p></div>
-        <div class="num"><p>8</p></div>
-        <div class="num"><p>9</p></div>
-        <div class="num yellow"><p>×</p></div>
+        <div class="num" data-value="7"><p>7</p></div>
+        <div class="num" data-value="8"><p>8</p></div>
+        <div class="num" data-value="9"><p>9</p></div>
+        <div class="num yellow" data-action="operator" data-value="*"><p>×</p></div>
 
-        <div class="num"><p>4</p></div>
-        <div class="num"><p>5</p></div>
-        <div class="num"><p>6</p></div>
-        <div class="num yellow"><p>-</p></div>
+        <div class="num" data-value="4"><p>4</p></div>
+        <div class="num" data-value="5"><p>5</p></div>
+        <div class="num" data-value="6"><p>6</p></div>
+        <div class="num yellow" data-action="operator"  data-value="-"><p>-</p></div>
 
-        <div class="num"><p>1</p></div>
-        <div class="num"><p>2</p></div>
-        <div class="num"><p>3</p></div>
-        <div class="num yellow"><p>+</p></div>
+        <div class="num" data-value="1"><p>1</p></div>
+        <div class="num" data-value="2"><p>2</p></div>
+        <div class="num" data-value="3"><p>3</p></div>
+        <div class="num yellow" data-action="operator"  data-value="+"><p>+</p></div>
 
-        <div class="num zero"><p>0</p></div>
-        <div class="num"><p>.</p></div>
-        <div class="num yellow"><p>=</p></div>
+        <div class="num zero" data-value="0"><p>0</p></div>
+        <div class="num" data-value="."><p>.</p></div>
+        <div class="num yellow" data-action="calculate"><p>=</p></div>
 
       </div>
     </div>
   </div>
+  <script src="cal.js"></script>
 </body>
 </html>
